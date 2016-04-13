@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+        body {
+            min-width: 357px;
+            overflow-x: hidden;
+        }
+    </style>
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="display" class="row">
+            <div id="displayTxt" class="span12">
+                00:00:00
+            </div>
+        </div>
+        <div id="settings" class="row">
+            <div class="span12">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

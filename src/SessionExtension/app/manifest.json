@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Session Timeout Checker",
+  "description": "This extension finds the actual session delay for a site.","
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "alarms",
+    "history",
+    "background",
+    "notifications",
+    "http://localhost/*"
+  ],
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [ "jquery-2.2.3.min.js", "app.js", "app.js.map", "app.ts", "background.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  }
+}
